@@ -1,0 +1,90 @@
+---
+title: 'Python Basics'
+description: 'Fundamental concepts of Python programming'
+---
+
+## Case Sensitivity
+Python is case-sensitive:
+```python
+variable = 1
+Variable = 2  # Different from 'variable'
+
+Installation & Setup
+Download from python.org
+
+Verify installation:
+
+bash
+python --version
+# or
+python3 --version
+Running Python
+Scripts: python filename.py
+
+Interactive: python or python3 in terminal
+
+IDEs: VS Code, PyCharm (best for large projects)
+
+Notebooks: Jupyter (best for data analysis)
+
+Brief History
+Created by Guido van Rossum in 1991. Named after Monty Python. Emphasizes code readability.
+
+Variables
+python
+# Basic assignment
+name = "Alice"  # str
+age = 25        # int
+price = 9.99    # float
+is_active = True # bool
+
+# Multiple assignment
+x, y, z = 1, 2, 3
+Functions
+Basic Function
+python
+def greet():
+    print("Hello!")
+With Parameters
+python
+def greet(name):
+    print(f"Hello, {name}!")
+With Return Value
+python
+def add(a, b):
+    return a + b
+Default Parameters
+python
+def greet(name="Guest"):
+    print(f"Hello, {name}!")
+Data Types
+Numeric
+python
+int_num = 10       # Integer
+float_num = 10.5   # Floating point
+complex_num = 1j   # Complex
+Sequence Types
+python
+list_ex = [1, "two", 3.0]  # Mutable
+tuple_ex = (1, "two", 3.0) # Immutable
+range_ex = range(5)        # range(0, 5)
+Text Type
+python
+string = "Hello World"
+Boolean
+python
+true_val = True
+false_val = False
+Set Types
+python
+set_ex = {1, 2, 3}         # Unordered, unique
+frozen_set = frozenset({1, 2, 3})  # Immutable set
+Dictionary
+python
+dict_ex = {"name": "Alice", "age": 25}
+Type Conversion
+python
+int("10")       # String to integer
+str(10)         # Integer to string
+float("10.5")   # String to float
+list((1,2,3))   # Tuple to list
