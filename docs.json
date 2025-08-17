@@ -57,6 +57,14 @@
             "pages": [
               "machine-learning/supervised/index",
               "machine-learning/supervised/linear-regression",
+              "machine-learning/supervised/logistic-regression",
+              "machine-learning/supervised/decision-tree",
+              "machine-learning/supervised/random-forest",
+              "machine-learning/supervised/svm",
+              "machine-learning/supervised/k-nearest-neighbors",
+              "machine-learning/supervised/naive-bayes",
+              "machine-learning/supervised/gradient-boosting"
+=======
               "machine-learning/supervised/logistic-regression"
             ]
           },
