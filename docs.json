@@ -21,7 +21,7 @@
           }
         ]
       },
-            {
+      {
         "tab": "EDA",
         "groups": [
           {
@@ -42,7 +42,6 @@
           }
         ]
       },
-      
       {
         "tab": "Machine Learning",
         "groups": [
@@ -64,8 +63,6 @@
               "machine-learning/supervised/k-nearest-neighbors",
               "machine-learning/supervised/naive-bayes",
               "machine-learning/supervised/gradient-boosting"
-=======
-              "machine-learning/supervised/logistic-regression"
             ]
           },
           {
@@ -94,8 +91,6 @@
           }
         ]
       },
-
-
       {
         "tab": "Deep Learning",
         "groups": [
@@ -258,9 +253,7 @@
       }
     ],
     "global": {
-      "anchors": [
-
-      ]
+      "anchors": []
     }
   },
   "logo": {
@@ -282,15 +275,15 @@
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
   },
   "footer": {
     "socials": {
