@@ -64,6 +64,8 @@
               "machine-learning/supervised/k-nearest-neighbors",
               "machine-learning/supervised/naive-bayes",
               "machine-learning/supervised/gradient-boosting"
+=======
+              "machine-learning/supervised/logistic-regression"
             ]
           },
           {

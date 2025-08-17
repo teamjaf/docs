@@ -7,6 +7,7 @@ description: "Binary classification using the logistic function."
 
 <img src="../../images/supervised/logistic-regression.svg" alt="Logistic regression icon" width="80" />
 
+=======
 Logistic regression is a linear model for **binary classification**. It estimates the probability that an input $\mathbf{x}$ belongs to the positive class.
 
 ## Hypothesis
@@ -23,6 +24,8 @@ Parameters are learned by minimizing the **logistic loss**:
 
 $$
 J(\boldsymbol{\theta}) = -\frac{1}{m} \sum_{i=1}^m \big[ y^{(i)} \log h_{\boldsymbol{\theta}}(\mathbf{x}^{(i)}) + (1 - y^{(i)})\log (1 - h_{\boldsymbol{\theta}}(\mathbf{x}^{(i)})) \big].
+=======
+J(\boldsymbol{\theta}) = -\frac{1}{m} \sum_{i=1}^m \big[ y^{(i)} \log h_{\boldsymbol{\theta}}(\mathbf{x}^{(i)}) + (1 - y^{(i)}) \log (1 - h_{\boldsymbol{\theta}}(\mathbf{x}^{(i)})) \big].
 $$
 
 ## Example (scikit-learn)
@@ -51,6 +54,7 @@ Email spam detection where emails are classified as spam or not spam.
 - Regularize with L1/L2 penalties to prevent overfitting.
 - See the [scikit-learn guide](https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression) for more details.
 
+=======
 ## Interpretation
 
 - Outputs a probability between 0 and 1.
