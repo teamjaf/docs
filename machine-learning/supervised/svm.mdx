@@ -1,0 +1,39 @@
+---
+title: "Support Vector Machine"
+description: "Margin-based classifier using hyperplanes."
+---
+
+# ⚖️ Support Vector Machine
+
+<img src="../../images/supervised/svm.svg" alt="SVM icon" width="80" />
+
+SVMs find the hyperplane that maximizes the margin between classes.
+
+## Mathematics
+
+The primal optimization problem for a linear SVM is
+
+$$
+\min_{\mathbf{w}, b} \frac{1}{2}\lVert\mathbf{w}\rVert^2 + C\sum_{i=1}^m \xi_i \quad \text{s.t. } y^{(i)} (\mathbf{w}^T \mathbf{x}^{(i)} + b) \ge 1 - \xi_i.
+$$
+
+## Example (scikit-learn)
+
+```python
+from sklearn import svm
+from sklearn.datasets import make_classification
+
+X, y = make_classification(n_features=2, n_redundant=0)
+model = svm.SVC(kernel="linear")
+model.fit(X, y)
+```
+
+## Use Case Example
+
+Classifying handwritten digits with clear margins between classes.
+
+## Recommendations
+
+- Choose kernels (linear, RBF) based on data.
+- Scale features for better performance.
+- See the [scikit-learn guide](https://scikit-learn.org/stable/modules/svm.html) for more.

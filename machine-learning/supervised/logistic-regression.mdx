@@ -1,0 +1,58 @@
+---
+title: "Logistic Regression"
+description: "Binary classification using the logistic function."
+---
+
+# 🔐 Logistic Regression
+
+<img src="../../images/supervised/logistic-regression.svg" alt="Logistic regression icon" width="80" />
+
+Logistic regression is a linear model for **binary classification**. It estimates the probability that an input $\mathbf{x}$ belongs to the positive class.
+
+## Hypothesis
+
+The model applies the logistic (sigmoid) function to a linear combination of the inputs:
+
+$$
+h_{\boldsymbol{\theta}}(\mathbf{x}) = \sigma(\mathbf{x}^T\boldsymbol{\theta}) = \frac{1}{1 + e^{-\mathbf{x}^T\boldsymbol{\theta}}}.
+$$
+
+## Cost Function
+
+Parameters are learned by minimizing the **logistic loss**:
+
+$$
+J(\boldsymbol{\theta}) = -\frac{1}{m} \sum_{i=1}^m \big[ y^{(i)} \log h_{\boldsymbol{\theta}}(\mathbf{x}^{(i)}) + (1 - y^{(i)})\log (1 - h_{\boldsymbol{\theta}}(\mathbf{x}^{(i)})) \big].
+$$
+
+## Example (scikit-learn)
+
+```python
+import numpy as np
+from sklearn.linear_model import LogisticRegression
+
+X = np.array([[0], [1], [2], [3]])
+y = np.array([0, 0, 1, 1])
+
+model = LogisticRegression()
+model.fit(X, y)
+
+proba = model.predict_proba([[1.5]])
+print(proba)
+```
+
+## Use Case Example
+
+Email spam detection where emails are classified as spam or not spam.
+
+## Recommendations
+
+- Use when the dependent variable is binary.
+- Regularize with L1/L2 penalties to prevent overfitting.
+- See the [scikit-learn guide](https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression) for more details.
+
+## Interpretation
+
+- Outputs a probability between 0 and 1.
+- Decision boundary at $h_{\boldsymbol{\theta}}(\mathbf{x}) = 0.5$.
+- For multi-class problems, use **one-vs-rest** or a **softmax regression** extension.
