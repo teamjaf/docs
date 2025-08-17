@@ -53,6 +53,14 @@
             ]
           },
           {
+            "group": "Supervised Learning",
+            "pages": [
+              "machine-learning/supervised/index",
+              "machine-learning/supervised/linear-regression",
+              "machine-learning/supervised/logistic-regression"
+            ]
+          },
+          {
             "group": "Customization",
             "pages": [
               "essentials/settings",
