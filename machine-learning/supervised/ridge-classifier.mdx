@@ -1,0 +1,54 @@
+---
+title: "Ridge Classifier"
+description: "Linear classification with $L_2$ regularization."
+---
+
+# 🧗 Ridge Classifier
+
+<img src="../../images/supervised/ridge-classifier.svg" alt="Ridge classifier icon" width="80" />
+
+The ridge classifier minimizes squared error with an $L_2$ penalty and predicts the class with the highest score.
+
+## Hypothesis
+
+For input $\mathbf{x}$, the model computes scores
+
+$$
+\hat{y} = \mathbf{x}^T \boldsymbol{\theta}
+$$
+
+and assigns the sign of the score in binary settings.
+
+## Loss Function
+
+Training minimizes the regularized squared loss:
+
+$$
+J(\boldsymbol{\theta}) = \sum_{i=1}^{m} (y^{(i)} - \mathbf{x}^{(i)T} \boldsymbol{\theta})^2 + \alpha \lVert \boldsymbol{\theta} \rVert_2^2.
+$$
+
+## Example (scikit-learn)
+
+```python
+import numpy as np
+from sklearn.linear_model import RidgeClassifier
+
+X = np.array([[0], [1], [2], [3]])
+y = np.array([0, 0, 1, 1])
+
+model = RidgeClassifier(alpha=1.0)
+model.fit(X, y)
+
+pred = model.predict([[1.5]])
+print(pred)
+```
+
+## Use Case Example
+
+Classifying text sentiment using bag-of-words features.
+
+## Recommendations
+
+- Works for high-dimensional problems like text or genomics.
+- Normalize features and tune $\alpha$.
+- See the [scikit-learn docs](https://scikit-learn.org/stable/modules/linear_model.html#ridge-regression-and-classification) for details.

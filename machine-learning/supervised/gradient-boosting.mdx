@@ -1,0 +1,39 @@
+---
+title: "Gradient Boosting"
+description: "Sequential ensemble that minimizes loss via gradients."
+---
+
+# 🚀 Gradient Boosting
+
+<img src="../../images/supervised/gradient-boosting.svg" alt="Gradient boosting icon" width="80" />
+
+Gradient boosting builds models sequentially, each new model correcting the errors of the combined previous ones.
+
+## Mathematics
+
+At each stage $m$, fit a model $h_m(x)$ to the negative gradient of the loss function:
+
+$$
+F_m(x) = F_{m-1}(x) + \nu h_m(x).
+$$
+
+## Example (scikit-learn)
+
+```python
+from sklearn.datasets import load_diabetes
+from sklearn.ensemble import GradientBoostingRegressor
+
+X, y = load_diabetes(return_X_y=True)
+model = GradientBoostingRegressor()
+model.fit(X, y)
+```
+
+## Use Case Example
+
+Predicting insurance claim amounts with complex feature interactions.
+
+## Recommendations
+
+- Sensitive to hyperparameters like learning rate and number of estimators.
+- Use early stopping or a validation set to avoid overfitting.
+- See the [scikit-learn guide](https://scikit-learn.org/stable/modules/ensemble.html#gradient-tree-boosting) for more.
