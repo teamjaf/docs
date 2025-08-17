@@ -21,7 +21,7 @@
           }
         ]
       },
-            {
+      {
         "tab": "EDA",
         "groups": [
           {
@@ -42,7 +42,6 @@
           }
         ]
       },
-      
       {
         "tab": "Machine Learning",
         "groups": [
@@ -50,6 +49,24 @@
             "group": "Overview",
             "pages": [
               "ml"
+            ]
+          },
+          {
+            "group": "Supervised Learning",
+            "pages": [
+              "machine-learning/supervised/index",
+              "machine-learning/supervised/linear-regression",
+              "machine-learning/supervised/ridge-regression",
+              "machine-learning/supervised/lasso-regression",
+              "machine-learning/supervised/logistic-regression",
+              "machine-learning/supervised/ridge-classifier",
+              "machine-learning/supervised/perceptron",
+              "machine-learning/supervised/decision-tree",
+              "machine-learning/supervised/random-forest",
+              "machine-learning/supervised/svm",
+              "machine-learning/supervised/k-nearest-neighbors",
+              "machine-learning/supervised/naive-bayes",
+              "machine-learning/supervised/gradient-boosting"
             ]
           },
           {
@@ -78,8 +95,6 @@
           }
         ]
       },
-
-
       {
         "tab": "Deep Learning",
         "groups": [
@@ -242,9 +257,7 @@
       }
     ],
     "global": {
-      "anchors": [
-
-      ]
+      "anchors": []
     }
   },
   "logo": {
@@ -266,15 +279,15 @@
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
   },
   "footer": {
     "socials": {

@@ -1,0 +1,41 @@
+---
+title: "k-Nearest Neighbors"
+description: "Instance-based learning using neighbor votes."
+---
+
+# 🤝 k-Nearest Neighbors
+
+<img src="../../images/supervised/knn.svg" alt="k-NN icon" width="80" />
+
+k-NN classifies a point by the majority label of its $k$ closest examples.
+
+## Mathematics
+
+Given a distance metric $d$, predict
+
+$$
+\hat{y} = \operatorname{mode}(y_i \text{ for } i \in N_k(x)),
+$$
+
+where $N_k(x)$ are the indices of the $k$ nearest neighbors of $x$.
+
+## Example (scikit-learn)
+
+```python
+from sklearn.datasets import load_iris
+from sklearn.neighbors import KNeighborsClassifier
+
+X, y = load_iris(return_X_y=True)
+model = KNeighborsClassifier(n_neighbors=3)
+model.fit(X, y)
+```
+
+## Use Case Example
+
+Recommending products based on similar users.
+
+## Recommendations
+
+- Choose $k$ via cross-validation.
+- Scale features for Euclidean distance.
+- See the [scikit-learn guide](https://scikit-learn.org/stable/modules/neighbors.html) for more.
